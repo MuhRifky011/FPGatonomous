@@ -2,7 +2,7 @@ export default function Home() {
     return (
         <main className="grid min-h-screen place-items-center px-6" >
             <div className="text-center">
-                <p className="mb-3-text-sm uppercase tracking-[0.3em] text-gat-orange">
+                <p className="mb-3 text-sm uppercase tracking-[0.3em] text-gat-orange">
                     Gatonomous
                 </p>
 
