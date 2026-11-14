@@ -8,10 +8,7 @@ export default function About() {
                 
                 <div className="flex flex-col justify-center">
                     <div className="mb-6 flex items-center gap-3">
-                        <span
-                            aria-hidden="true"
-                            className="h-[3px] w-16 bg-gat-orange"
-                        />
+                        <span aria-hidden="true" className="h-[3px] w-16 bg-gat-orange"/>
 
                         <p className="font-display text-lg font-bold text-gat-orange">
                             About Us

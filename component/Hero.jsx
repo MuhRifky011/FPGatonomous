@@ -18,11 +18,14 @@ export default function HeroSection() {
            
             <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1230px] flex-1 flex-col items-center px-4 text-center md:px-8 xl:px-0">
                 <div className="w-full">
-                    <h1 className="font-display text-4xl font-bold uppercase leading-none text-white md:text-5xl xl:text-[64px]">
-                        Precision in{" "}
-                        <span className="text-white/55">
-                            Every Placement
-                        </span>
+                    <h1 className="font-display text-[36px] font-black leading-tight tracking-normal text-white md:text-[48px] xl:text-[64px] xl:leading-[75px]">
+                        Precision In{" "}
+                            <span
+                            className=" text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.82)]"
+                            >
+                            Every
+                            </span>{" "}
+                            Placement
                     </h1>
 
                     <p className="mx-auto mt-5 max-w-[850px] text-sm leading-relaxed text-white/80 md:text-base xl:text-xl">
