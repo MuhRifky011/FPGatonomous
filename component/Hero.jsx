@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-         <section className="relative flex h-[calc(100svh-68px)] overflow-hidden pb-4 pt-10 md:h-[calc(100svh-84px)] md:pb-6 md:pt-14 xl:h-[calc(100svh-108px)] xl:pb-8 xl:pt-[clamp(72px,10vh,131px)]">
+         <section className="relative flex min-h-[100svh] pb-12 pt-[130px] md:pb-16 md:pt-[170px] xl:pb-20 xl:pt-[240px]">
             <Image
                 src="/image/PlaceholderHero.png"
                 alt=""
@@ -15,7 +15,7 @@ export default function HeroSection() {
         
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(151,24,13,0.85)_0%,_rgba(86,12,5,0.45)_55%,_rgba(45,6,3,0.85)_100%)]" />
 
-           
+           <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[180px] bg-gradient-to-b from-transparent via-gat-red/70 to-gat-red"/>
             <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1230px] flex-1 flex-col items-center px-4 text-center md:px-8 xl:px-0">
                 <div className="w-full">
                     <h1 className="font-display text-[36px] font-black leading-tight tracking-normal text-white md:text-[48px] xl:text-[64px] xl:leading-[75px]">

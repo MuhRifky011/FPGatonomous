@@ -34,10 +34,10 @@ export default function Navbar() {
         setIsOpen(false);
     }
     return (
-        <header className="sticky top-0 z-50 w-full bg-[linear-gradient(to_bottom,rgba(8,8,8,1)_0%,rgba(8,8,8,0.88)_45%,rgba(8,8,8,0)_100%)] px-4 py-[10px] md:px-8 xl:px-[47px]">
+        <header className="fixed inset-x-0 top-0 z-50 w-full bg-[linear-gradient(180deg,#080808_0%,rgba(8,8,8,0.95)_35%,rgba(30,5,3,0.75)_65%,rgba(86,12,5,0)_100%)] px-4 py-[10px] md:px-8 xl:px-[47px]">
             <div className= "mx-auto flex w-full max-w-[1920px] items-center justify-between">
                 <Link href="/" aria-label="Kembali ke halaman utama" className="shrink-0" onClick={closeMenu}>
-                    <Image src="/image/Logo1.png" alt="Logo Gatonomous" width={235} height={88} priority className="h-12 w-auto md:h-16 xl:h-[88px]" />
+                    <Image src="/image/Logo1.png" alt="Logo Gatonomous" width={235} height={88} priority className="h-10 w-auto md:h-12 xl:h-[64px]" />
                 </Link>
                 <nav aria-label="Navigasi Utama" className="hidden md:block">
                     <ul className="flex items-center gap-8 xl:gap-12">
