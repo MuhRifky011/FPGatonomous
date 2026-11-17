@@ -1,3 +1,5 @@
+import Robot3d from "./Robot3d";
+
 const robotFeatures = [
     {
         title: "Mechanical",
@@ -85,7 +87,9 @@ export default function OurRobot() {
                 </div>
 
                 <div className="grid gap-6 lg:grid-cols-2">
-                    <RobotPlaceholder className="min-h-[320px] lg:min-h-[500px]" />
+                    <div className="relative h-[320px] w-full min-w-0 overflow-hidden rounded-xl lg:h-[500px]">
+                     <Robot3d />
+                    </div>
 
                     <div className="flex flex-col gap-6">
                         <div>
