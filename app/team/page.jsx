@@ -1,4 +1,3 @@
-import Sponsor from "@/component/Sponsor";
 import Image from "next/image";
 
 export default function timPage() {

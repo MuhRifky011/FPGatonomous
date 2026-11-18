@@ -11,7 +11,7 @@ const menuItems = [
     },
     {
         label:"Team",
-        href:"Team"
+        href:"/Team"
     },
     {
         label:"About Us",
