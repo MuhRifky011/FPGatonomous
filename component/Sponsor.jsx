@@ -56,7 +56,7 @@ const sponsors = [
 function Sponsor({ name, image }) {
     return (
         <div className="relative h-24 overflow-hidden rounded-md bg-transparent md:h-32 xl:h-[148px]">
-            <Image src={image} alt={`logo ${name}`} fill sizess="(min-width: 1024px) 20vw, 50vw" className="object-contain p-4 md:p-5 transisiton-transform duration-300 ease-out hover:scale-110 md:p-5"/>
+            <Image src={image} alt={`logo ${name}`} fill sizess="(min-width: 1024px) 20vw, 50vw" className="object-contain p-4 md:p-5 transition-transform duration-300 ease-out hover:scale-110 md:p-5"/>
         </div>
     );
 }

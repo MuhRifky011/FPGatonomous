@@ -51,6 +51,16 @@ export default function HeroSection() {
                         </Link>
                     </div>
                 </div>
+                <div className="relative mt-6 min-h-0 w-full max-w-[930px] flex-1 md:mt-8">
+                    <Image
+                        src="/image/PlaceholderHero.png"
+                        alt="Ilustrasi area kerja robot Gatonomous"
+                        fill
+                        sizes="(min-width: 1280px) 930px, 90vw"
+                        priority
+                        className="object-contain"
+                    />
+                </div>
             </div>
         </section>
     );

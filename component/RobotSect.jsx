@@ -104,9 +104,9 @@ export default function OurRobot() {
                     {robotFeatures.map((feature) => (
                         <article
                             key={feature.id}
-                            className="relative aspect-[459/402] w-full max-w-[340px] justify-self-center overflow-hidden rounded-[8px] md:max-w-none"
+                            className="relative aspect-[459/402] w-full max-w-[459px] justify-self-center overflow-hidden rounded-[8px] md:max-w-none"
                         >
-                            <Image src={feature.image} alt={`${feature.name} Gatonomous`} fill sizes="(min-width: 768px) 33vw, 340px" className="object-contain"/>
+                            <Image src={feature.image} alt={`${feature.name} Gatonomous`} fill sizes="(min-width: 768px) 33vw, 340px" className="object-contain transition-transform duration-300 ease-out hover:scale-90"/>
                         </article>
                     ))}
                 </div>
