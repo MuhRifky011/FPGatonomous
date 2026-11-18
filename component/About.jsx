@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function About() {
     return (
         <section
@@ -32,36 +33,8 @@ export default function About() {
                     </p>
                 </div>
 
-                
-                <div
-                    role="img"
-                    aria-label="Placeholder foto tim Gatonomous"
-                    className="relative min-h-[280px] overflow-hidden bg-[#ead5d7] md:min-h-[363px]"
-                >
-                    <div
-                        aria-hidden="true"
-                        className="absolute inset-y-0 left-[18%] w-[16%] bg-white/55"
-                    />
-
-                    <div
-                        aria-hidden="true"
-                        className="absolute inset-y-0 right-[18%] w-[16%] bg-white/55"
-                    />
-
-                    <div className="absolute inset-0 grid place-items-center">
-                        <svg
-                            aria-hidden="true"
-                            viewBox="0 0 24 24"
-                            className="h-10 w-10 rounded-[4px] border border-gat-black/50 p-2 text-gat-black/60"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                        >
-                            <path d="M4 5h16v14H4z" />
-                            <path d="m6 16 4-4 3 3 2-2 3 3" />
-                            <circle cx="16" cy="9" r="1.5" />
-                        </svg>
-                    </div>
+                <div className="relative aspect-[573/363] w-full max-w-[573px] overflow-hidden md:justify-self-end rounded-2xl" >
+                    <Image src="/image/Foto.svg" alt="Foto" fill sizes="(min-width: 768px) 573px, 100vw" />
                 </div>
             </div>
         </section>
