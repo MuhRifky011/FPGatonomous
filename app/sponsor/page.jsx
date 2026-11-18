@@ -1,6 +1,43 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Sponsor from "@/component/Sponsor";
 export default function sponsor() {
+    const [status, setStatus] = useState("idle");
+    const [pesan, setPesan] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    setStatus("loading");
+    setPesan("");
+
+    try {
+      const response = await fetch("/api/kontak", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const hasil = await response.json();
+
+      if (response.ok) {
+        setStatus("berhasil");
+        setPesan(hasil.pesan);
+      } else {
+        setStatus("gagal");
+        setPesan(hasil.error);
+      }
+    } catch {
+      setStatus("gagal");
+      setPesan("Koneksi bermasalah, coba lagi");
+    }
+  }
     return ( 
         <main className="min-h-screen bg-[#690c05] text-white">
           <section className="relative min-h-[950px] w-full overflow-hidden rounded-b-[clamp(60px,7vw,133px)] xl:aspect-[1923/908] xl:min-h-0">
@@ -20,6 +57,7 @@ export default function sponsor() {
                 </div>
                     <form
                         id="contact"
+                        onSubmit={handleSubmit}
                         className="rounded-[30px] bg-black/95 p-6 shadow-2xl md:p-8">
                     
                     <div className="grid grid-cols-2 gap-4">
@@ -118,12 +156,28 @@ export default function sponsor() {
                         />
                     </div>
 
-                    <button
-                        type="button"
-                        className="mt-5 w-full rounded-md bg-gat-orange py-3 text-sm font-semibold text-black transition hover:brightness-110"
-                    >
-                        Send
+                    <button type="submit" disabled={status === "loading"}
+                        className="mt-5 w-full rounded-md bg-gat-orange py-3 text-sm font-semibold text-black transition hover:brightness-110">
+                       {status === "loading" ? "Sending..." : "Send"}
                     </button>
+                        {status === "berhasil" && (
+                    <p
+                        role="status"
+                        className="mt-4 rounded-md bg-green-100 px-4 py-3 text-sm text-green-800"
+                    >
+                        {pesan}
+                    </p>
+                    )}
+
+                    {status === "gagal" && (
+                    <p
+                        role="alert"
+                        className="mt-4 rounded-md bg-red-100 px-4 py-3 text-sm text-red-800"
+                    >
+                        {pesan}
+                    </p>
+                    )}
+
                 </form>
             </div>
         </section>
