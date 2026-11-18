@@ -1,46 +1,62 @@
+import Image from "next/image"
+
 const sponsors = [
     {
         id: 1,
         name: "Sponsor 1",
+        image: "/image/LogoSponsor/Sponsor 1.svg",
     },
     {
         id: 2,
         name: "Sponsor 2",
+        image: "/image/LogoSponsor/Sponsor2.svg",
     },
     {
         id: 3,
         name: "Sponsor 3",
+        image: "/image/LogoSponsor/Sponsor3.svg",
     },
     {
         id: 4,
         name: "Sponsor 4",
+        image: "/image/LogoSponsor/Sponsor4.svg",
     },
     {
         id: 5,
         name: "Sponsor 5",
+        image: "/image/LogoSponsor/Sponsor5.svg",
     },
     {
         id: 6,
         name: "Sponsor 6",
+        image: "/image/LogoSponsor/Sponsor6.svg",
+    },
+    {
+        id: 7,
+        name: "Sponsor 7",
+        image: "/image/LogoSponsor/Sponsor 7.svg",
+    },
+    {
+        id: 8,
+        name: "Sponsor 8",
+        image: "/image/LogoSponsor/Sponsor 8.svg",
+    },
+    {
+        id: 9,
+        name: "Sponsor 9",
+        image: "/image/LogoSponsor/Sponsor 9.svg",
+    },
+    {
+        id: 10,
+        name: "Sponsor 10",
+        image: "/image/LogoSponsor/Sponsor 10.svg",
     },
 ];
 
-function SponsorPlaceholder({ name }) {
+function Sponsor({ name, image }) {
     return (
-        <div
-            role="img"
-            aria-label={`Placeholder logo ${name}`}
-            className="relative h-24 overflow-hidden bg-[#c4abad] md:h-32 xl:h-[148px]"
-        >
-            <div
-                aria-hidden="true"
-                className="absolute inset-y-0 left-[22%] w-[16%] bg-white/25"
-            />
-
-            <div
-                aria-hidden="true"
-                className="absolute inset-y-0 right-[22%] w-[16%] bg-white/25"
-            />
+        <div className="relative h-24 overflow-hidden rounded-md bg-transparent md:h-32 xl:h-[148px]">
+            <Image src={image} alt={`logo ${name}`} fill sizess="(min-width: 1024px) 20vw, 50vw" className="object-contain p-4 md:p-5 transisiton-transform duration-300 ease-out hover:scale-110 md:p-5"/>
         </div>
     );
 }
@@ -74,11 +90,12 @@ export default function SponsorSect() {
                 </div>
 
                 {/* Kumpulan logo sponsor */}
-                <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:gap-10 xl:gap-12">
+                <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 md:gap-8 xl:gap-10">
                     {sponsors.map((sponsor) => (
-                        <SponsorPlaceholder
+                        <Sponsor
                             key={sponsor.id}
                             name={sponsor.name}
+                            image={sponsor.image}
                         />
                     ))}
                 </div>
