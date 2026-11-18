@@ -4,12 +4,12 @@ const sponsors = [
     {
         id: 1,
         name: "Sponsor 1",
-        image: "/image/LogoSponsor/Sponsor 1.svg",
+        image: "/image/LogoSponsor/sponsor 1.svg",
     },
     {
         id: 2,
         name: "Sponsor 2",
-        image: "/image/LogoSponsor/Sponsor2.svg",
+        image: "/image/LogoSponsor/sponsor2.svg",
     },
     {
         id: 3,
@@ -19,7 +19,7 @@ const sponsors = [
     {
         id: 4,
         name: "Sponsor 4",
-        image: "/image/LogoSponsor/Sponsor4.svg",
+        image: "/image/LogoSponsor/sponsor4.svg",
     },
     {
         id: 5,
@@ -34,22 +34,22 @@ const sponsors = [
     {
         id: 7,
         name: "Sponsor 7",
-        image: "/image/LogoSponsor/Sponsor 7.svg",
+        image: "/image/LogoSponsor/sponsor 7.svg",
     },
     {
         id: 8,
         name: "Sponsor 8",
-        image: "/image/LogoSponsor/Sponsor 8.svg",
+        image: "/image/LogoSponsor/sponsor 8.svg",
     },
     {
         id: 9,
         name: "Sponsor 9",
-        image: "/image/LogoSponsor/Sponsor 9.svg",
+        image: "/image/LogoSponsor/sponsor 9.svg",
     },
     {
         id: 10,
         name: "Sponsor 10",
-        image: "/image/LogoSponsor/Sponsor 10.svg",
+        image: "/image/LogoSponsor/sponsor 10.svg",
     },
 ];
 
