@@ -34,7 +34,7 @@ export default function About() {
                 </div>
 
                 <div className="relative aspect-[573/363] w-full max-w-[573px] overflow-hidden md:justify-self-end rounded-2xl" >
-                    <Image src="/image/Foto.svg" alt="Foto" fill sizes="(min-width: 768px) 573px, 100vw" />
+                    <Image src="/image/Foto.svg" alt="Foto" fill priority sizes="(min-width: 768px) 573px, 100vw" />
                 </div>
             </div>
         </section>

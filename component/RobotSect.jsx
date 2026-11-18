@@ -1,35 +1,21 @@
+import Image from "next/image";
 import Robot3d from "./Robot3d";
 
 const robotFeatures = [
     {
-        title: "Mechanical",
-        description: "Built for stable and precise object handling.",
-        items: [
-            "4 Degrees of Freedom",
-            "Prismatic Joint System",
-            "Adaptive Gripper",
-            "Lightweight Aluminum Frame",
-        ],
+     id : 1,
+     name : "Mekanikal",
+     image : "/image/Mekanikal.png",
     },
     {
-        title: "Programming",
-        description: "Intelligent software for coordinated movement.",
-        items: [
-            "Robot Operating System",
-            "C++ Control Program",
-            "Forward and Inverse Kinematics",
-            "Automated Motion Sequence",
-        ],
+     id : 2,
+     name : "Programming",
+     image : "/image/Programming.png",
     },
     {
-        title: "Electrical",
-        description: "Reliable control and real-time communication.",
-        items: [
-            "STM32 Microcontroller",
-            "High-Torque Servo Motors",
-            "Position and Distance Sensors",
-            "Computer Communication System",
-        ],
+     id : 3,
+     name : "Elektrikal",
+     image : "/image/Elektrikal.png",
     },
 ];
 
@@ -90,7 +76,6 @@ export default function OurRobot() {
                     <div className="relative h-[320px] w-full min-w-0 overflow-hidden rounded-xl lg:h-[500px]">
                      <Robot3d />
                     </div>
-
                     <div className="flex flex-col gap-6">
                         <div>
                             <h2 className="font-display text-4xl font-bold uppercase leading-[0.95] text-white md:text-5xl xl:text-[56px]">
@@ -108,7 +93,9 @@ export default function OurRobot() {
                             </p>
                         </div>
 
-                        <RobotPlaceholder className="min-h-[240px] flex-1 lg:min-h-[280px]" />
+                        <div className="relative aspect-[646/262] w-full max-w-[646px] overflow-hidden rounded-2xl md:justify-self-end">
+                            <Image src="/image/FotoFull.jpg" alt="FotoReal" fill priority/>
+                        </div>
                     </div>
                 </div>
 
@@ -116,22 +103,10 @@ export default function OurRobot() {
                 <div className="grid gap-[11px] md:grid-cols-3">
                     {robotFeatures.map((feature) => (
                         <article
-                            key={feature.title}
-                            className="rounded-[8px] bg-[#ead5d7] p-6 text-gat-black"
+                            key={feature.id}
+                            className="relative aspect-[459/402] w-full max-w-[340px] justify-self-center overflow-hidden rounded-[8px] md:max-w-none"
                         >
-                            <h3 className="text-center font-display text-xl font-bold">
-                                {feature.title}
-                            </h3>
-
-                            <p className="mt-3 text-sm leading-relaxed">
-                                {feature.description}
-                            </p>
-
-                            <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">
-                                {feature.items.map((item) => (
-                                    <li key={item}>{item}</li>
-                                ))}
-                            </ul>
+                            <Image src={feature.image} alt={`${feature.name} Gatonomous`} fill sizes="(min-width: 768px) 33vw, 340px" className="object-contain"/>
                         </article>
                     ))}
                 </div>
