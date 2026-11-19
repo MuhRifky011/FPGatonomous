@@ -44,7 +44,7 @@ export default function HeroSection() {
                         </Link>
 
                         <Link
-                            href="/team"
+                            href="/Team"
                             className="inline-flex items-center rounded-[4px] border border-white/70 px-5 py-3 text-sm font-semibold text-white transition hover:border-gat-orange hover:text-gat-orange"
                         >
                             Meet Our Team
