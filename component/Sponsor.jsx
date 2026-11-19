@@ -1,4 +1,11 @@
+"use client";
+
 import Image from "next/image"
+import {Splide, SplideSlide} from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/react-splide/css/core";
+
+
 
 const sponsors = [
     {
@@ -61,6 +68,54 @@ function Sponsor({ name, image }) {
     );
 }
 
+function SponsorCarousel({ items, speed, label }) {
+  return (
+    <Splide
+      aria-label={label}
+      extensions={{ AutoScroll }}
+      options={{
+        type: "loop",
+        drag: "free",
+        focus: "center",
+        arrows: false,
+        pagination: false,
+        perPage: 5,
+        gap: "2.5rem",
+
+        autoScroll: {
+          speed: speed,
+          pauseOnHover: true,
+          pauseOnFocus: true,
+        },
+
+        breakpoints: {
+          1024: {
+            perPage: 4,
+            gap: "2rem",
+          },
+          768: {
+            perPage: 3,
+            gap: "1.5rem",
+          },
+          640: {
+            perPage: 2,
+            gap: "1rem",
+          },
+        },
+      }}
+    >
+      {items.map((sponsor) => (
+        <SplideSlide key={sponsor.id}>
+          <Sponsor
+            name={sponsor.name}
+            image={sponsor.image}
+          />
+        </SplideSlide>
+      ))}
+    </Splide>
+  );
+}
+
 export default function SponsorSect() {
     return (
         <section
@@ -69,7 +124,7 @@ export default function SponsorSect() {
             className="px-4 pb-20 md:px-8 md:pb-24 xl:px-[47px] xl:pb-[131px]"
         >
             <div className="mx-auto flex w-full max-w-[1431px] flex-col gap-6 p-6 md:gap-10 md:p-10 xl:gap-12 xl:p-12">
-                {/* Judul section */}
+                
                 <div className="flex items-center justify-center gap-5">
                     <span
                         aria-hidden="true"
@@ -89,7 +144,7 @@ export default function SponsorSect() {
                     />
                 </div>
 
-                {/* Kumpulan logo sponsor */}
+                
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 md:gap-8 xl:gap-10">
                     {sponsors.map((sponsor) => (
                         <Sponsor
@@ -99,6 +154,51 @@ export default function SponsorSect() {
                         />
                     ))}
                 </div>
+
+<div className="overflow-hidden">
+                <Splide
+                    aria-label="Logo sponsor berjalan"
+                    extensions={{ AutoScroll }}
+                    options={{
+                    type: "loop",
+                    drag: "free",
+                    focus: "center",
+                    arrows: false,
+                    pagination: false,
+                    perPage: 5,
+                    gap: "2rem",
+
+                    autoScroll: {
+                        speed: 0.8,
+                        pauseOnHover: true,
+                        pauseOnFocus: true,
+                    },
+
+                    breakpoints: {
+                        1024: {
+                        perPage: 4,
+                        },
+                        768: {
+                        perPage: 3,
+                        },
+                        640: {
+                        perPage: 2,
+                        gap: "1rem",
+                        },
+                    },
+                    }}
+                >
+                    {sponsors.map((sponsor) => (
+                    <SplideSlide key={`slider-${sponsor.id}`}>
+                        <Sponsor
+                        name={sponsor.name}
+                        image={sponsor.image}
+                        />
+                    </SplideSlide>
+                    ))}
+                </Splide>
+                </div>
+
             </div>
         </section>
     );
