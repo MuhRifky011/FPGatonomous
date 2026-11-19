@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-         <section className="relative flex min-h-[100svh] pb-12 pt-[130px] md:pb-16 md:pt-[170px] xl:pb-20 xl:pt-[240px]">
+         <section className="relative  min-h-[100svh] w-full overflow-hidden  pb-12 pt-[130px] md:pb-16 md:pt-[170px] xl:pb-20 xl:pt-[240px]">
             <Image
-                src="/image/PlaceholderHero.png"
-                alt=""
+                src="/image/FOTOHERO.png"
+                alt="Foto Hero"
                 fill
                 sizes="100vw"
-                className="pointer-events-none object-cover opacity-[0.09]"
+                className="pointer-events-none object-cover opacity-[0.50]"
             />
 
         
@@ -50,16 +50,6 @@ export default function HeroSection() {
                             Meet Our Team
                         </Link>
                     </div>
-                </div>
-                <div className="relative mt-6 min-h-0 w-full max-w-[930px] flex-1 md:mt-8">
-                    <Image
-                        src="/image/PlaceholderHero.png"
-                        alt="Ilustrasi area kerja robot Gatonomous"
-                        fill
-                        sizes="(min-width: 1280px) 930px, 90vw"
-                        priority
-                        className="object-contain"
-                    />
                 </div>
             </div>
         </section>
