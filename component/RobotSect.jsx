@@ -78,7 +78,7 @@ export default function OurRobot() {
                     </div>
                     <div className="flex flex-col gap-6">
                         <div>
-                            <h2 className="font-display text-4xl font-bold uppercase leading-[0.95] text-white md:text-5xl xl:text-[56px]">
+                            <h2 className="font-display text-4xl font-bold uppercase leading-[0.95] text-white md:text-5xl xl:text-[56px] mt-30">
                                 Built To Reach
                                 <br />
                                 The Unreachable
@@ -92,10 +92,11 @@ export default function OurRobot() {
                                 for reliable autonomous movement.
                             </p>
                         </div>
-
-                        <div className="relative aspect-[646/262] w-full max-w-[646px] overflow-hidden rounded-2xl md:justify-self-end">
-                            <Image src="/image/FotoFull.jpg" alt="FotoReal" fill priority/>
-                        </div>
+                    {/*
+                    <div className="relative aspect-[646/262] w-full max-w-[646px] overflow-hidden rounded-2xl md:justify-self-end">
+                        <Image src="/image/FotoFull.jpg" alt="FotoReal" fill priority/>
+                    </div>
+                    */}
                     </div>
                 </div>
 
