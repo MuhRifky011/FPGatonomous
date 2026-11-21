@@ -16,7 +16,7 @@ const TimTeknikal =[
     {
         id: 3,
         name: "Alvin",
-        image: "/image/TeampPage/Alvin.png",
+        image: "/image/TeamPage/Alvin.png",
     },
 ]
 
@@ -52,7 +52,7 @@ export default function timPage() {
                 </div>
             </section>
             <div className="mt-[33px] w-full">
-                <svg viewbox ="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" className="block h-[90px] w-full text-gat-orange md:h-[120px] " fill="none">
+                <svg viewBox ="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" className="block h-[90px] w-full text-gat-orange md:h-[120px] " fill="none">
                     <path d="M 0 3 H 400 L 500 115 L 600 3 H 1000" stroke="currentColor" strokeWidth="4" vectorEffect="non-scalling"/>
                 </svg>
 
@@ -61,8 +61,28 @@ export default function timPage() {
                     <span className="text-[#E99040]">GATON</span>
                     <span className="text-[#FFA600]">OMOUS</span>
             </h2>
-                <div className="mx-auto grid w-full max-w-[1230px] items-stretch gap-10 md:grid-cols-2 md:gap-[23px]">
-                                
+
+
+                <div className="mx-auto  w-full max-w-[1230px] px-4 pb-20 md:px-8 md:px-28">
+                    <div className="mt-16">
+                        <div className="flex items-center gap-3">
+                            <span aria-hidden="true" className="h-[2px] w-24 bg-gat-orange md:-36" />
+
+                            <h3 className="text-sm font-semibold text-white md:text-base">
+                                Technical Division
+                            </h3>
+                        </div>
+                        {/*foto */}
+                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols 2 lg:grid-cols-3 ">
+                            {TimTeknikal.map((member) => (
+                                <article key={member.id} className="group relative h-[400px] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">
+                                    <Image src={member.image} alt={'${member.name} Technical Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px"
+                                    className="object-contain transition-transform duration-300 ease-out group-hover:scale-105"
+                                    />
+                                </article>
+                            ))}
+                        </div>
+                    </div>
                                 
                 </div>
         </main>
