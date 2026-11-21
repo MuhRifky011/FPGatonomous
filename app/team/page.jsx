@@ -22,14 +22,15 @@ const TimTeknikal =[
 
 const TimOfficial = [
     {
-        id : 1,
-        name: "Axel",
-        image: "/image/TeamPage/Axel.png",
+        id: 1,
+        name: "Rifky",
+        image: "/image/TeamPage/Rifky.png",
     },
     {
-        id: 2,
-        name: "Rifky",
-        image: "/image/TeampPage/Rifky.png",
+        
+        id : 2,
+        name: "Axel",
+        image: "/image/TeamPage/Axel.png",
     },
     {
         id: 3,
@@ -61,8 +62,7 @@ export default function timPage() {
                     <span className="text-[#E99040]">GATON</span>
                     <span className="text-[#FFA600]">OMOUS</span>
             </h2>
-
-
+                {/* ini buat teknikal*/}
                 <div className="mx-auto  w-full max-w-[1230px] px-4 pb-20 md:px-8 md:px-28">
                     <div className="mt-16">
                         <div className="flex items-center gap-3">
@@ -76,15 +76,35 @@ export default function timPage() {
                         <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols 2 lg:grid-cols-3 ">
                             {TimTeknikal.map((member) => (
                                 <article key={member.id} className="group relative h-[400px] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">
-                                    <Image src={member.image} alt={'${member.name} Technical Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px"
-                                    className="object-contain transition-transform duration-300 ease-out group-hover:scale-105"
+                                    <Image src={member.image} alt={'${member.name} Technical Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px" className="object-contain"/>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/*ini buat yang official */} 
+                <div className="mx-auto  w-full max-w-[1230px] px-4 pb-20 md:px-8 md:px-28">
+                    <div className="mt-16">
+                        <div className="flex items-center justify-end gap-3">
+                            <h3 className="text-right text-sm font-semibold text-white md:text-base">
+                                Official Division
+                            </h3>
+                            <span aria-hidden="true" className="h-[2px] w-24 bg-gat-orange md:-36" />
+
+                        </div>
+                        {/*foto */}
+                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols 2 lg:grid-cols-3 ">
+                            {TimOfficial.map((member) => (
+                                <article key={member.id} className="group relative aspect-[446/561] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">
+                                    <Image src={member.image} alt={'${member.name} Official Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px"
+                                    className="object-contain"
                                     />
                                 </article>
                             ))}
                         </div>
                     </div>
-                                
-                </div>
+                </div>         
         </main>
     );
 }
