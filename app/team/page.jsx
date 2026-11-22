@@ -30,7 +30,7 @@ const TimOfficial = [
         
         id : 2,
         name: "Axel",
-        image: "/image/TeamPage/Axel.png",
+        image: "/image/TeamPage/Axell.png",
     },
     {
         id: 3,
@@ -73,10 +73,11 @@ export default function timPage() {
                             </h3>
                         </div>
                         {/*foto */}
-                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols 2 lg:grid-cols-3 ">
+                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 ">
                             {TimTeknikal.map((member) => (
                                 <article key={member.id} className="group relative h-[400px] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">
-                                    <Image src={member.image} alt={'${member.name} Technical Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px" className="object-contain"/>
+                                    <Image src={member.image} alt={'${member.name} Technical Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px" 
+                                        className="object-contain transition-[filter, transform] duration-300 ease-out group-hover:-translate-y-2 "/>
                                 </article>
                             ))}
                         </div>
@@ -94,11 +95,11 @@ export default function timPage() {
 
                         </div>
                         {/*foto */}
-                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols 2 lg:grid-cols-3 ">
+                        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 ">
                             {TimOfficial.map((member) => (
-                                <article key={member.id} className="group relative aspect-[446/561] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">
+                                <article key={member.id} className="group relative aspect-[446/561] w-full max-w-[320px] justify-self-center overflow-hidden md:h-[440px] lg:max-w-[360px]">    
                                     <Image src={member.image} alt={'${member.name} Official Division gatonomous '} fill sizes="(min-width: 1024px) 360px, (min-width= 640px) 50vw, 320px"
-                                    className="object-contain"
+                                    className="object-contain transition-[filter, transform] duration-300 ease-out group-hover:-translate-y-2"
                                     />
                                 </article>
                             ))}
