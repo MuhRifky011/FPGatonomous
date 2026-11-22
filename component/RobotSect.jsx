@@ -5,17 +5,17 @@ const robotFeatures = [
     {
      id : 1,
      name : "Mekanikal",
-     image : "/image/Mekanikal.png",
+     image : "/image/Fitur/Mekanikal.png",
     },
     {
      id : 2,
      name : "Programming",
-     image : "/image/Programming.png",
+     image : "/image/Fitur/Programming.png",
     },
     {
      id : 3,
      name : "Elektrikal",
-     image : "/image/Elektrikal.png",
+     image : "/image/Fitur/Electrical.png",
     },
 ];
 
@@ -53,8 +53,12 @@ export default function OurRobot() {
     return (
         <section
             id="robot"
-            className="scroll-mt-[108px] px-4 pb-20 md:px-8 md:pb-24 xl:px-[47px] xl:pb-[131px]"
-        >
+            className="relative overflow-hidden scroll-mt-[108px] px-4 pb-20 md:px-8 md:pb-24 xl:px-[47px] xl:pb-[131px]"
+        > 
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_45%,rgba(233,144,64,0.20),transparent_30%),radial-gradient(circle_at_80%_55%,rgba(0,0,0,0.35),transparent_48%)]"  />
+            <div aria-hidden=" pointer-events-none absolute inset-0  opacity-[0.07]  bg-[linear-gradient(rgba(255,255,255,0.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.25)_1px,transparent_1px)]
+                bg-[size:64px_64px] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]"/>
+            <div aria-hidden="true" className=" pointer-events-none absolute left-[3%] top-[18%] h-[500px] w-[500px] rounded-full bg-gat-orange/10 blur-[100px]"/>
             <div className="mx-auto flex w-full max-w-[1432px] flex-col gap-[11px] xl:min-h-[1002px]">
                 <div className="flex items-center justify-center gap-5">
                     <span
@@ -85,11 +89,11 @@ export default function OurRobot() {
                             </h2>
 
                             <p className="mt-6 max-w-[650px] text-sm leading-relaxed text-white/80 md:text-base xl:text-lg">
-                                Designed to perform precise pick-and-place
-                                operations in hazardous or hard-to-reach
-                                environments. The system combines coordinated
-                                mechanical, electrical, and software control
-                                for reliable autonomous movement.
+                                Autonomous robotic arm designed to pick, move, and
+                                precisely arrange blocks into a triangular structure. It is developed
+                                to perform this task in hazardous or hard-to-reach areas, reducing
+                                direct human exposure while making operations safer, faster, and more
+                                efficient.
                             </p>
                         </div>
                     {/*
@@ -101,13 +105,18 @@ export default function OurRobot() {
                 </div>
 
                 
-                <div className="grid gap-[11px] md:grid-cols-3">
+                <div className="grid gap-y-14 md:grid-cols-3 md:gap-x-8 xl:gap-x-10">
                     {robotFeatures.map((feature) => (
                         <article
                             key={feature.id}
-                            className="relative aspect-[459/402] w-full max-w-[459px] justify-self-center overflow-hidden rounded-[8px] md:max-w-none"
+                            className="group relative isolate aspect-[459/402] w-full max-w-[360px] justify-self-center overflow-visible lg-max-w-[380px] xl:max-w-[400px]"
                         >
-                            <Image src={feature.image} alt={`${feature.name} Gatonomous`} fill sizes="(min-width: 768px) 33vw, 340px" className="object-contain transition-transform duration-300 ease-out hover:scale-90"/>
+                            <span aria-hidden="true" className="pointer-events-none absolute inset-[8%] z-0 origin-center scale-95 rounded-[22px] bg-gat-orange opacity-0
+                            shadow-[0_18px_35px_rgba(0,0,0,0.35)] transition-all duration-500 ease-out group-hover:rotate-[9deg] group-hover:scale-100 group-hover:opacity-100"/>
+                            <div className="relative z-10 h-full w-full overflow-hidden rounded-[8px] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.01]">
+
+                            <Image src={feature.image} alt={`${feature.name} Gatonomous`} fill sizes="(min-width: 768px) 33vw, 340px" className="object-contain"/>
+                            </div>
                         </article>
                     ))}
                 </div>

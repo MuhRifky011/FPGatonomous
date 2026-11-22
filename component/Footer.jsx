@@ -37,10 +37,10 @@ export default function Footer() {
       className="
         bg-[linear-gradient(180deg,rgba(8,8,8,0)_0%,rgba(8,8,8,0.72)_48%,#080808_100%)]
         px-4
-        py-12
+        pt-6
+        pb-10
         md:px-8
-        lg:min-h-[319px]
-        lg:px-12
+        
       "
     >
       <div
@@ -51,7 +51,7 @@ export default function Footer() {
           gap-10
           lg:min-h-[223px]
           lg:grid-cols-[0.8fr_1.7fr_0.7fr]
-          lg:items-end
+          lg:items-center
           lg:gap-[61px]
         "
       >

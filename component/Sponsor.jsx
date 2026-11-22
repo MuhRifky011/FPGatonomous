@@ -121,9 +121,9 @@ export default function SponsorSect() {
         <section
             id="partners"
             aria-labelledby="sponsor-heading"
-            className="px-4 pb-20 md:px-8 md:pb-24 xl:px-[47px] xl:pb-[131px]"
+            className="px-4 pb-6 md:px-8 md:pb-8 xl:px-[47px] xl:pb-10"
         >
-            <div className="mx-auto flex w-full max-w-[1431px] flex-col gap-6 p-6 md:gap-10 md:p-10 xl:gap-12 xl:p-12">
+            <div className="mx-auto flex w-full max-w-[1431px] flex-col gap-6 px-6 md:gap-8 md:pt-10 xl:gap-12 xl:pt-12">
                 
                 <div className="flex items-center justify-center gap-5">
                     <span
